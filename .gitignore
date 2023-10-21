@@ -1,0 +1,69 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extension files
+*.so
+
+# Distribution / packaging
+dist/
+build/
+eggs/
+*.egg-info/
+
+# Installer logs
+pip-log.txt
+
+# Virtual environment
+.venv/
+env/
+*.env
+
+# Compiled bytecode
+*.pyc
+
+# Logs and databases
+*.log
+*.sqlite
+
+# OS or Editor-specific files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Python auto-generated files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Jupyter Notebook specific files
+.ipynb_checkpoints/
+
+# Python debugging files
+*.pdb
+
+# Visual Studio Code specific files
+.vscode/
+
+# PyCharm files
+.idea/
+
+# Private config file (contains sensitive information)
+config.py
+secret.ini
+
+# Environment variables file
+.env
+
+# Ignore .pyc files in the root directory and all its subdirectories
+**/__pycache__/
+**/*.pyc
+
+# Ignore __pycache__ directories in the root and subdirectories
+**/__pycache__/
+
+# Ignore Jupyter checkpoint folders in all directories
+**/.ipynb_checkpoints/
