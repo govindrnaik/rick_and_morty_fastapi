@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        /* Style for the navigation bar */
-        .navbar {
-            position: sticky;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: black;
-            padding: 10px 0;
-            text-align: center;
-        }
-        
-        /* Style for the navigation links */
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -31,7 +13,7 @@
     </div>
 
     <!-- Page Content -->
-    <div style="height: 1000px; background-color: #f0f0f0;">
+    <div style="height: 100%; background-color: #f0f0f0;">
         <h1>Sample Page Content</h1>
         <p>This is the main content of your web page.</p>
     </div>
