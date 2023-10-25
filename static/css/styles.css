@@ -14,3 +14,27 @@
     text-decoration: none;
     padding: 10px 20px;
 }
+
+
+/* card css */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    max-width: 300px;
+}
+
+.card-header {
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.card-header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
