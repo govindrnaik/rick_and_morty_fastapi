@@ -28,7 +28,7 @@ async def read_root(request: Request):
     data = response.json()
     print(data["results"])
 
-    return templates.TemplateResponse("index.html", context={"request": request, "results": data["results"]})
+    return templates.TemplateResponse("character_card.html", context={"request": request, "characters": data["results"]})
 
 
 if __name__ == "__main__":

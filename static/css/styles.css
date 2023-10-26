@@ -18,6 +18,12 @@
 
 /* card css */
 
+.card-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card {
     border: 1px solid #ccc;
     border-radius: 5px;

@@ -18,11 +18,7 @@
         <h1>Sample Page Content</h1>
         <p>This is the main content of your web page.</p>
 
-        {% for item in results %}
-        {% include "character_card.html" %}
-        {% endfor %}
-
-        
+        {% block character_card %}{% endblock %}
     
     </div>
 </body>
