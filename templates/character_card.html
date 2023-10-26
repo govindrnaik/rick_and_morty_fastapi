@@ -1,21 +1,21 @@
 {% extends "index.html" %}
 {% block character_card %}
-{% for character in characters %}
 
 <div class="card-holder">
+    {% for character in characters %}
     <div class="card">
         <div class="card-header">
-        <img src="{{character['image']}}" alt="Card Header Image">
+            <img src="{{character['image']}}" alt="Card Header Image">
+        </div>
+        <div class="card-body">
+            <h2>{{character['name']}}</h2>
+            <h3>status: {{character['status']}}</h3>
+            <h3>species: {{character['species']}}</h3>
+            <h3>gender: {{character['gender']}}</h3>
+            <h3>origin: {{character['origin']['name']}}</h3>
+            <p>This is the text content of your card. You can add any information or details here.</p>
+        </div>
     </div>
-    <div class="card-body">
-        <h2>{{character['name']}}</h2>
-        <h3>status: {{character['status']}}</h3>
-        <h3>species: {{character['species']}}</h3>
-        <h3>gender: {{character['gender']}}</h3>
-        <h3>origin: {{character['origin']['name']}}</h3>
-        <p>This is the text content of your card. You can add any information or details here.</p>
-    </div>
+    {% endfor %}
 </div>
-</div>
-{% endfor %}
 {% endblock %}

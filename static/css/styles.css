@@ -20,11 +20,14 @@
 
 .card-holder {
     display: flex;
+    justify-content: space-evenly; /* Adjust as needed */
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 auto;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 20px;

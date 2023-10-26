@@ -17,19 +17,18 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
-@app.get("/", response_class=HTMLResponse)  
+@app.get("/home", response_class=HTMLResponse)  
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", context={"request": request})
 
-@app.get("/characters", response_class=HTMLResponse)  
+@app.get("/", response_class=HTMLResponse)  
 async def read_root(request: Request):
 
     response = requests.get("https://rickandmortyapi.com/api/character")
     data = response.json()
-    print(data["results"])
 
     return templates.TemplateResponse("character_card.html", context={"request": request, "characters": data["results"]})
 
 
 if __name__ == "__main__":
-    uvicorn.run(app="main:app", reload=True)
+    uvicorn.run(app="main:app",host="0.0.0.0", reload=True)
