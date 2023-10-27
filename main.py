@@ -7,6 +7,7 @@ from starlette.requests import Request
 from starlette.responses import HTMLResponse
 import uvicorn
 import requests
+import htmx
 
 from fastapi.staticfiles import StaticFiles
 
