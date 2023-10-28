@@ -33,3 +33,9 @@ async def read_root(request: Request):
 
 if __name__ == "__main__":
     uvicorn.run(app="main:app",host="0.0.0.0", reload=True)
+
+# @app.post("/submit")
+# async def submit_form(request: Request):
+#     form_data = await request.form()
+#     # Process form_data as needed
+#     return htmx.json_response({"message": "Form submitted successfully!"})
