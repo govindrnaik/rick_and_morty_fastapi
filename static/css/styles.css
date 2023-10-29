@@ -1,25 +1,68 @@
-
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
 }
 
-/* Style for the navigation */
 .navbar {
-    position: sticky;
+    background-color: #000; /* Change the background color here */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
     top: 0;
-    left: 0;
-    right: 0;
-    background-color: black;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.2);
+    z-index: 100;
 }
 
-.navbar a {
-    color: white;
+.logo a {
     text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search button {
+    background-color: #fff;
+    color: #000; /* Change the button color here */
+    border: none;
     padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add margin to content to prevent it from being hidden under the fixed navbar */
+.content {
+    margin-top: 60px;
 }
 
 
