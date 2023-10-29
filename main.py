@@ -9,9 +9,19 @@ import uvicorn
 import requests
 import htmx
 
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI() 
+
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace with the list of allowed origins (or use "*" for any origin)
+    allow_methods=["*"],  # Replace with the list of allowed HTTP methods (e.g., ["GET", "POST"])
+    allow_headers=["*"],  # Replace with the list of allowed headers
+)
 
 # Mount the "static" directory as a route to serve static files
 app.mount("/static", StaticFiles(directory="static"), name="static")
