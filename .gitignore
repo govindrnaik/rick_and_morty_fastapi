@@ -67,3 +67,6 @@ secret.ini
 
 # Ignore Jupyter checkpoint folders in all directories
 **/.ipynb_checkpoints/
+
+
+tailwindcss/
