@@ -11,11 +11,11 @@ import htmx
 
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-
+from fastapi.middleware.gzip import GZipMiddleware
 app = FastAPI() 
 
 
-
+app.add_middleware(GZipMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Replace with the list of allowed origins (or use "*" for any origin)
