@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-from fastapi import FastAPI
+from typing import Optional
+from fastapi import FastAPI, Query
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.requests import Request
@@ -38,6 +39,17 @@ async def read_root(request: Request):
     response = requests.get("https://rickandmortyapi.com/api/character")
     data = response.json()
 
+    return templates.TemplateResponse("character_card.html", context={"request": request, "characters": data["results"]})
+
+@app.get("/data", response_class=HTMLResponse)  
+async def read_data(request: Request, search: Optional[str]=Query(None)):
+    if search:
+        response = requests.get(f"https://rickandmortyapi.com/api/character/?name={search}")
+        data = response.json()
+    else:
+        response = requests.get(f"https://rickandmortyapi.com/api/character")
+        data = response.json()
+        
     return templates.TemplateResponse("character_card.html", context={"request": request, "characters": data["results"]})
 
 
